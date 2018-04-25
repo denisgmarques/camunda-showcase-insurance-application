@@ -1,4 +1,5 @@
 *.class
+.idea
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -17,3 +18,4 @@ target
 
 # Mac rubbish
 **/*.DS_Store
+camunda-showcase-insurance-application.iml
