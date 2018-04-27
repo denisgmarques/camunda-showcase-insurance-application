@@ -15,6 +15,17 @@
 <!--         <bean class="org.camunda.connect.plugin.impl.ConnectProcessEnginePlugin" /> -->
       </list>
     </property>
+
+    <property name="HistoryEventHandler">
+      <bean class="com.camunda.demo.insuranceapplication.configuration.MyCompositeHistoryEventHandler">
+        <property name="historyEventHandler">
+          <list>
+            <bean class="com.camunda.demo.insuranceapplication.configuration.LogHistoryEventHandler" />
+            <bean class="org.camunda.bpm.engine.impl.history.handler.DbHistoryEventHandler" />
+          </list>
+        </property>
+      </bean>
+    </property>
   </bean>
 
 </beans>
